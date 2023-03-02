@@ -1,0 +1,11 @@
+@import "root";
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: $def-f;
+    font-size: 62.5%;
+    font-weight: $def-w;
+}

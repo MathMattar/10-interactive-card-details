@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+// Font-family
+$def-f: 'Space Grotesk', sans-serif;
+
+// Font-size
+$card-data: 1rem;
+$card-number: 1.8rem;
+$label: 1.2rem;
+$alet: 1.2rem;
+$input: 1.8rem;
+$button: 1.8rem;
+
+// Font-weight
+$def-w: 500;
+
+// Letter spacing
+$sp-alert: 0.005em;
+$sp-cvc-date: 0.06em;
+$sp-card-name: 0.08em;
+$sp-card-number: 0.122em;
+$sp-label: 0.162em;
+
+// Colors
+// Primary
+$input-border: linear-gradient(to right, hsl(249, 99%, 64%) to hsl(278, 94%, 30%));
+$input-error: hsl(0, 100%, 66%);
+
+// Neutral
+$background: hsl(0, 0%, 100%);
+$card-text: hsl(0, 0%, 100%);
+$form-label: hsl(278, 68%, 11%);
+$input-border: hsl(270, 3%, 87%);
+$form-placeholder: hsl(279, 6%, 55%);
+
+// Mixin
+
+@mixin text ($size, $spacing, $color, $transform){
+    font-size: $size;
+    letter-spacing: $spacing;
+    color: $color;
+    text-transform: $transform;
+}
