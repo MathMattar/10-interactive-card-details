@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-        <!-- reset -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
-            integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- reset -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>Interactive Card</title>
 
@@ -24,46 +24,44 @@
     <main class="container">
 
         <section class="container__card">
-            <picture class="card__images">
-                <img src="./assets/images/bg-card-back.png" alt="Back side of the credit card" class="card__back">
-                <img src="./assets/images/card-logo.svg" alt="Card logo" class="card__logo">
-                <img src="./assets/images/bg-card-front.png" alt="Front side of the credit card" class="card__front">
-            </picture>
-            <div class="card__data">
-                <span class="card__cvc">000</span>
-                <span class="card__number">0000 0000 0000 0000</span>
-                <span class="card__name">Jane Appleseed</span>
-                <span class="card__date">00/00</span>
-            </div>
+
+            <section class="card__back">
+                <p class="card__cvc">000</p>
+            </section>
+
+            <section class="card__front">
+                <h2 class="card__number">0000 0000 0000 0000</h2>
+                <p class="card__name">Jane Appleseed</p>
+                <p class="card__date">00/00</p>
+            </section>
         </section>
 
-        <form class="container__form">
-            <section class="form__data">
-                <label for="name" class="form__label">Cardholder name
-                    <input type="text" class="form__data" id="name" placeholder="e.g. Jane Appleseed">
-                </label>
+        <form class="container__form" autocomplete="off">
+
+            <label for="name" class="form__label">Cardholder name</label>
+            <span class="form__alert"></span>
+            <input type="text" class="form__input" id="name" placeholder="e.g. Jane Appleseed" pattern="^[a-zA-Z]+$">
+
+            <label for="number" class="form__label">Card number</label>
+            <span class="form__alert"></span>
+            <input type="number" class="form__input" id="number" placeholder="e.g. 1234 5678 9123 0000" min="0"
+                max="9999999999999999" maxlength="16" pattern="/d*">
+
+            <label for="date-month" class="form__label">Exp. date (mm/yy)</label>
+            <span class="form__alert"></span>
+            <input type="number" class="form__input" id="date-month" placeholder="mm" min="0" max="12" maxlength="2"
+                pattern="/d*">
+            <input type="number" class="form__input" id="date-year" placeholder="yy" min="0" max="99" maxlength="2"
+                pattern="/d*">
+
+            <label for="cvc" class="form__label">Cvc</label>
+            <span class="form__alert"></span>
+            <input type="number" class="form__input" id="cvc" placeholder="e.g. 123" min="0" max="999" maxlength="3"
+                pattern="/d*">
+
             </section>
 
-            <section class="form__data">
-                <label for="number" class="form__label">Card number
-                    <input type="number" class="form__data" id="number" placeholder="e.g. 1234 5678 9123 0000">
-                </label>
-            </section>
-
-            <section class="form__data">
-                <label for="date" class="form__label">Cardholder name
-                    <input type="number" class="form__date" id="date-month" placeholder="MM">
-                    <input type="number" class="form__date" id="date-year" placeholder="YY">
-                </label>
-            </section>
-
-            <section class="form__data">
-                <label for="cvc" class="form__label">Cvc
-                    <input type="number" class="form__cvc" id="cvc" placeholder="e.g. 123">
-                </label>
-            </section>
-
-            <button type="submit">Confirm</button>
+            <button type="submit" class="form__submit">Confirm</button>
 
         </form>
 
