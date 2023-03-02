@@ -4,12 +4,10 @@
 $def-f: 'Space Grotesk', sans-serif;
 
 // Font-size
-$card-data: 1rem;
-$card-number: 1.8rem;
-$label: 1.2rem;
-$alet: 1.2rem;
-$input: 1.8rem;
-$button: 1.8rem;
+$card-default: 1rem;
+$card-large: 1.8rem;
+$form-default: 1.8rem;
+$form-small: 1.2rem;
 
 // Font-weight
 $def-w: 500;
@@ -23,13 +21,13 @@ $sp-label: 0.162em;
 
 // Colors
 // Primary
-$input-border: linear-gradient(to right, hsl(249, 99%, 64%) to hsl(278, 94%, 30%));
+$input-border: hsl(249, 99%, 64%), to hsl(278, 94%, 30%);
 $input-error: hsl(0, 100%, 66%);
 
 // Neutral
 $background: hsl(0, 0%, 100%);
-$card-text: hsl(0, 0%, 100%);
-$form-label: hsl(278, 68%, 11%);
+$default-contrast: hsl(0, 0%, 100%);
+$default-color-form: hsl(278, 68%, 11%);
 $input-border: hsl(270, 3%, 87%);
 $form-placeholder: hsl(279, 6%, 55%);
 
