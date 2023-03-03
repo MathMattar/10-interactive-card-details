@@ -1,0 +1,38 @@
+body {
+    .container {
+        .container__form {}
+
+        .complete-state {
+            background-image: url(../images/icon-complete.svg);
+            background-repeat: no-repeat;
+            background-position: center 14rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 25.5rem .8rem 8.2rem;
+
+            .complete-state__title {
+                @include text ($complete-title, $sp-title, $default-color-form, uppercase);
+                margin: 0 auto;
+            }
+
+            .complete-state__text {
+                @include text ($complete-default, normal, $default-color-form, unset);
+                margin: 1.8rem auto 4.8rem;
+            }
+
+            .complete-state__button {
+                @include text ($form-default, normal, $default-contrast, none);
+                background-color: $default-color-form;
+                border: none;
+                border-radius: .8rem;
+                width: 100%;
+                padding: 1.3rem 0;
+            }
+        }
+
+        .--hidden {
+            display: none
+        }
+    }
+}
