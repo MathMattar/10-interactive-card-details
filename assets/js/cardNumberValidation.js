@@ -1,8 +1,8 @@
 export default function numberValidation(input) {
   const regex = /[^0-9]/g;
 
-  input.addEventListener("input", (e) => {
-    let number = input.value.replace(/[^0-9]/g, "");
+  input.addEventListener("input", () => {
+    let number = input.value.replace(regex, "");
 
     if (number.length > 4) {
       number = number.match(/.{1,4}/g).join(" ");
