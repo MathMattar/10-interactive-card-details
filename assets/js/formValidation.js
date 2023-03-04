@@ -1,16 +1,21 @@
-import checkNumber from "./checkNumber";
+import numberValidation from "./cardNumberValidation.js";
 
 const inputs = document.querySelectorAll("[required]");
 
 inputs.forEach((input) => {
   input.addEventListener("blur", () => checkInput(input));
   input.addEventListener("invalid", (e) => e.preventDefault());
+
+  if (input.name === "number") {
+    numberValidation(input);
+  }
 });
 
 const errorType = [
   "valueMissing",
   "typeMismatch",
   "patternMismatch",
+  "customError",
   "tooShort",
 ];
 
@@ -25,32 +30,34 @@ const errorMessages = {
     valueMissing: "Can't be blank",
     typeMismatch: "Wrong format, numbers only",
     patternMismatch: "Wrong format, numbers only",
-    tooShort: "Your card number has 16 digits",
+    customError: "Your card number has 16 digits",
   },
   date: {
     valueMissing: "Can't be blank",
     typeMismatch: "Wrong format, numbers only",
     patternMismatch: "Wrong format, numbers only",
-    tooShort: "Use the two number format",
-    tooLong: "Use the two number format",
+    tooShort: "Wrong format, use xx",
   },
   cvc: {
     valueMissing: "Can't be blank",
     typeMismatch: "Wrong format, numbers only",
     patternMismatch: "Wrong format, numbers only",
     tooShort: "Your cvc has 3 digits",
-    tooLong: "Your cvc has 3 digits",
   },
 };
 
 function checkInput(input) {
   let errorMessage = "";
-  errorType.forEach((erro) => {
-    if (input.validity[erro]) {
-      errorMessage = errorMessages[input.name][erro];
-    }
-  });
 
+  if (input.validity.valueMissing) {
+    errorMessage = errorMessages[input.name].valueMissing;
+  } else {
+    errorType.forEach((erro) => {
+      if (input.validity[erro]) {
+        errorMessage = errorMessages[input.name][erro];
+      }
+    });
+  }
   const alertError = input.parentNode.querySelector(".form__alert");
   const inputValidator = input.checkValidity();
 
@@ -62,5 +69,5 @@ function checkInput(input) {
     input.classList.remove("--border-error");
   }
 
-  checkNumber();
+  console.log(input.validity);
 }
