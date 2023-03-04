@@ -159,6 +159,9 @@ body .container .container__form .form__submit {
   cursor: pointer;
 }
 
+body .container .--hidden {
+  display: none;
+}
 body .container .complete-state {
   background-image: url(../images/icon-complete.svg);
   background-repeat: no-repeat;

@@ -2,6 +2,10 @@ body {
     .container {
         .container__form {}
 
+        .--hidden {
+            display: none;
+        }
+
         .complete-state {
             background-image: url(../images/icon-complete.svg);
             background-repeat: no-repeat;
