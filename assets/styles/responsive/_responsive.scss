@@ -1,0 +1,98 @@
+@media only screen and (min-width: 1400px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        padding: 18.9rem 22.7rem 18.4rem 16.4rem;
+
+        &::before {
+            background-image: url(../images/bg-main-desktop.png);
+            padding: unset;
+            width: 48rem;
+            height: 100vh;
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            column-gap: 13rem;
+            width: 100%;
+            height: 100%;
+            max-height: 55rem;
+
+            .container__card {
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: space-between;
+                width: fit-content;
+                
+
+                .card__back {
+                    width: 44.7rem;
+                    height: 24.5rem;
+                    padding: 11.1rem 5.9rem 11.6rem 35.7rem;
+                    margin: 0 0 0 9.4rem;
+
+                    .card__cvc {
+                        font-size: $card-medium;
+                        letter-spacing: $sp-cvc-desktop;
+                    }
+                }
+
+                .card__front {
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    width: 44.7rem;
+                    height: 24.5rem;
+                    padding: 13.9rem 3.2rem 2.5rem;
+                    margin: unset;
+
+
+                    .card__number {
+                        font-size: $complete-title;
+                    }
+
+                    .card__name {
+                        font-size: $card-small;
+                        letter-spacing: $sp-name-desktop;
+                    }
+
+                    .card__date {
+                        font-size: $card-medium;
+                    }
+
+                    &::before {
+                        top: 2.7rem;
+                        left: 3rem;
+                        width: 9rem;
+                        height: 5rem;
+                        background-size: 8.8rem;
+                    }
+                }
+            }
+
+            .container__form {
+                align-content: center;
+                row-gap: 2.6rem;
+                width: 36.4%;
+                margin: unset;
+
+                #month {
+                    margin-right: .5rem;
+                }
+
+                #year {
+                    margin-left: .5rem;
+                }
+
+                .form__submit {
+                    margin-top: 1.4rem;
+                }
+            }
+        }
+    }
+}
