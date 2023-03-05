@@ -1,12 +1,15 @@
-import numberValidation from "./cardNumberValidation.js";
-import { dateValidation, monthValidation } from "./dateValidation.js";
+import {
+  numberValidation,
+  dateValidation,
+  monthValidation,
+} from "./inputRules.js";
 
 const inputs = document.querySelectorAll("[required]");
 const form = document.getElementById("form");
 const completeState = document.getElementById("complete-state");
 const redirect = document.getElementById("continue");
 
-submit.addEventListener("click", (e) => {
+form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   form.classList.add("--hidden");
@@ -16,8 +19,7 @@ submit.addEventListener("click", (e) => {
 redirect.addEventListener("click", (e) => {
   e.preventDefault();
 
-  form.classList.remove("--hidden");
-  completeState.classList.add("--hidden");
+  location.reload();
 });
 
 inputs.forEach((input) => {

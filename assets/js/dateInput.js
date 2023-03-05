@@ -1,4 +1,4 @@
-// tentativa manter erro do input date exposto
+// tentativa manter erro do input date exposto após correção individual 
 
   // const monthInput = document.getElementById("month");
   // const yearInput = document.getElementById("year");
