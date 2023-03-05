@@ -9,7 +9,7 @@ body {
             .form__container {
                 width: 100%;
 
-                &:nth-child(3) {              
+                &:nth-child(3) {
                     width: 50%;
 
                     .form__input {
@@ -28,18 +28,13 @@ body {
                     margin-bottom: .8rem;
                 }
 
-                .form__alert {
-                    display: block;
-                    @include text($form-small, $sp-alert, $input-error, none);
-                    margin-top: .8rem;
-                }
-
                 .form__input {
                     @include text($form-default, normal, $default-color-form, none);
                     width: 100%;
                     border: 1px solid $input-border;
                     border-radius: .8rem;
                     padding: 1.1rem 1.6rem;
+                    margin: 0 0 0.8rem 0;
                     cursor: pointer;
 
                     &::placeholder {
@@ -57,6 +52,11 @@ body {
                     &.--border-error {
                         border: 1px solid $input-error
                     }
+                }
+
+                .form__alert {
+                    display: block;
+                    @include text($form-small, $sp-alert, $input-error, none);
                 }
             }
 

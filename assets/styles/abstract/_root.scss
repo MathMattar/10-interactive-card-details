@@ -5,11 +5,14 @@ $def-f: 'Space Grotesk', sans-serif;
 
 // Font-size
 $card-default: 1rem;
+$card-small: 1.4rem;
+$card-medium: 1.6rem;
 $card-large: 1.8rem;
 $form-default: 1.8rem;
 $form-small: 1.2rem;
 $complete-title: 2.8rem;
 $complete-default: 1.8rem;
+
 
 // Font-weight
 $def-w: 500;
@@ -17,8 +20,10 @@ $def-w: 500;
 // Letter spacing
 $sp-alert: 0.005em;
 $sp-cvc-date: 0.06em;
-$sp-card-name: 0.08em;
-$sp-card-number: 0.122em;
+$sp-cvc-desktop: 0.13em;
+$sp-name: 0.08em;
+$sp-name-desktop: 0.14em;
+$sp-number: 0.122em;
 $sp-label: 0.162em;
 $sp-title: 0.13em;
 

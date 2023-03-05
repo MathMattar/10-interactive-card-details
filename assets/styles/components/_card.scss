@@ -1,7 +1,7 @@
 body {
     position: relative;
     background-color: $background;
-    padding: 3.2rem 4.3% 4.5rem ;
+    padding: 3.2rem 4.3% 4.5rem;
     z-index: 0;
 
     &::before {
@@ -24,6 +24,7 @@ body {
             justify-content: center;
 
             .card__back {
+                position: relative;
                 background-image: url(../images/bg-card-back.png);
                 background-repeat: no-repeat;
                 background-size: contain;
@@ -53,18 +54,31 @@ body {
 
                 .card__number {
                     grid-area: number;
-                    @include text ($card-large, $sp-card_number, $default-contrast, none)
+                    @include text ($card-large, $sp-number, $default-contrast, none)
                 }
 
                 .card__name {
                     grid-area: name;
-                    @include text ($card-default, $sp-card_name, $default-contrast, uppercase)
+                    @include text ($card-default, $sp-name, $default-contrast, uppercase)
                 }
 
                 .card__date {
                     grid-area: date;
                     justify-self: end;
                     @include text ($card-default, $sp-cvc-date, $default-contrast, none)
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 1.8rem;
+                    left: 2rem;
+                    width: 6rem;
+                    height: 3rem;
+                    background-image: url(../images/card-logo.svg);
+                    background-repeat: no-repeat;
+                    background-size: 5.4rem;
+                    z-index: 0;
                 }
             }
         }

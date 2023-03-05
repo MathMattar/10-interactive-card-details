@@ -33,6 +33,7 @@ body .container .container__card {
   justify-content: center;
 }
 body .container .container__card .card__back {
+  position: relative;
   background-image: url(../images/bg-card-back.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -83,6 +84,18 @@ body .container .container__card .card__front .card__date {
   color: hsl(0, 0%, 100%);
   text-transform: none;
 }
+body .container .container__card .card__front::before {
+  content: "";
+  position: absolute;
+  top: 1.8rem;
+  left: 2rem;
+  width: 6rem;
+  height: 3rem;
+  background-image: url(../images/card-logo.svg);
+  background-repeat: no-repeat;
+  background-size: 5.4rem;
+  z-index: 0;
+}
 
 body .container .container__form {
   display: flex;
@@ -111,14 +124,6 @@ body .container .container__form .form__container .form__label {
   cursor: pointer;
   margin-bottom: 0.8rem;
 }
-body .container .container__form .form__container .form__alert {
-  display: block;
-  font-size: 1.2rem;
-  letter-spacing: 0.005em;
-  color: hsl(0, 100%, 66%);
-  text-transform: none;
-  margin-top: 0.8rem;
-}
 body .container .container__form .form__container .form__input {
   font-size: 1.8rem;
   letter-spacing: normal;
@@ -128,6 +133,7 @@ body .container .container__form .form__container .form__input {
   border: 1px solid hsl(270, 3%, 87%);
   border-radius: 0.8rem;
   padding: 1.1rem 1.6rem;
+  margin: 0 0 0.8rem 0;
   cursor: pointer;
 }
 body .container .container__form .form__container .form__input::-moz-placeholder {
@@ -145,6 +151,13 @@ body .container .container__form .form__container .form__input:focus {
 }
 body .container .container__form .form__container .form__input.--border-error {
   border: 1px solid hsl(0, 100%, 66%);
+}
+body .container .container__form .form__container .form__alert {
+  display: block;
+  font-size: 1.2rem;
+  letter-spacing: 0.005em;
+  color: hsl(0, 100%, 66%);
+  text-transform: none;
 }
 body .container .container__form .form__submit {
   font-size: 1.8rem;
@@ -198,4 +211,89 @@ body .container .complete-state .complete-state__button {
 }
 body .container .--hidden {
   display: none;
+}
+
+@media only screen and (min-width: 1400px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 18.9rem 22.7rem 18.4rem 16.4rem;
+  }
+  body::before {
+    background-image: url(../images/bg-main-desktop.png);
+    padding: unset;
+    width: 48rem;
+    height: 100vh;
+  }
+  body .container {
+    position: relative;
+    display: flex;
+    -moz-column-gap: 13rem;
+         column-gap: 13rem;
+    width: 100%;
+    height: 100%;
+    max-height: 55rem;
+  }
+  body .container .container__card {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  body .container .container__card .card__back {
+    width: 44.7rem;
+    height: 24.5rem;
+    padding: 11.1rem 5.9rem 11.6rem 35.7rem;
+    margin: 0 0 0 9.4rem;
+  }
+  body .container .container__card .card__back .card__cvc {
+    font-size: 1.6rem;
+    letter-spacing: 0.13em;
+  }
+  body .container .container__card .card__front {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 44.7rem;
+    height: 24.5rem;
+    padding: 13.9rem 3.2rem 2.5rem;
+    margin: unset;
+  }
+  body .container .container__card .card__front .card__number {
+    font-size: 2.8rem;
+  }
+  body .container .container__card .card__front .card__name {
+    font-size: 1.4rem;
+    letter-spacing: 0.14em;
+  }
+  body .container .container__card .card__front .card__date {
+    font-size: 1.6rem;
+  }
+  body .container .container__card .card__front::before {
+    top: 2.7rem;
+    left: 3rem;
+    width: 9rem;
+    height: 5rem;
+    background-size: 8.8rem;
+  }
+  body .container .container__form {
+    align-content: center;
+    row-gap: 2.6rem;
+    width: 36.4%;
+    margin: unset;
+  }
+  body .container .container__form #month {
+    margin-right: 0.5rem;
+  }
+  body .container .container__form #year {
+    margin-left: 0.5rem;
+  }
+  body .container .container__form .form__submit {
+    margin-top: 1.4rem;
+  }
 }/*# sourceMappingURL=style.css.map */
