@@ -41,7 +41,7 @@ $form-placeholder: hsl(279, 6%, 55%);
 
 // Mixin
 
-@mixin text ($size, $spacing, $color, $transform){
+@mixin text ($size, $spacing, $color, $transform) {
     font-size: $size;
     letter-spacing: $spacing;
     color: $color;
