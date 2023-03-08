@@ -18,7 +18,6 @@ export function numberValidation(input) {
   });
 }
 
-
 export function dateValidation(input) {
   if (input.name === "date") {
     input.addEventListener("input", (e) => {
