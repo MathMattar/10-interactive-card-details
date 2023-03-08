@@ -6,7 +6,7 @@ Esta é uma solução para o desafio [Interactive card details de Frontend Mento
 
 - [Resumo](#resumo)
   - [Desafio](#desafio)
-  - [Screenshot](#screenshot)
+  - [Captura de tela](#captura-de-tela)
   - [Links](#links)
 - [Processo](#processo)
   - [Construção](#construção)
@@ -31,7 +31,7 @@ Os usuários devem ser capazes de:
   - Qualquer campo estiver vazio;
   - O número do cartão, data se validade, ou campos CVC estão no formato errado;
 - Veja o layout ideal dependendo do tamanho da tela de seu dispositivo;
-- Veja os estados interativos para elementos elementos na página.
+- Observe os estados interativos para elementos na página.
 
 <br>
 
@@ -89,20 +89,25 @@ Os usuários devem ser capazes de:
 
 ```JavaScript
 export function numberValidation(input) {
+
   const regex = /[^0-9]/g;
 
   input.addEventListener("input", () => {
+
     let number = input.value.replace(regex, "");
 
     if (number.length > 4) {
+
       number = number.match(/.{1,4}/g).join(" ");
     }
 
     input.value = number;
 
     if (input.value.length < input.minLength) {
+
       input.setCustomValidity("Your card number has 16 digits");
     } else {
+
       input.setCustomValidity("");
     }
   });
@@ -115,14 +120,18 @@ export function numberValidation(input) {
 
 ```JavaScript
 export function dateValidation(input) {
+
   if (input.name === "date") {
+
     input.addEventListener("input", (e) => {
+
       const value = e.target.value;
 
       // Expressão regular para verificar se o valor é um número de 0 a 9
       const regex = /^[0-9]*$/;
 
       if (!regex.test(value)) {
+
         // Remove todos os caracteres não numéricos do valor de entrada
         e.target.value = value.replace(/[^0-9]/g, "");
       }
@@ -131,11 +140,15 @@ export function dateValidation(input) {
 }
 
 export function monthValidation(input) {
+
   if (input.name === "date" && input.id === "month") {
+
     const month = parseInt(input.value, 10);
     if (month < 1 || month > 12 || isNaN(month)) {
+
       input.setCustomValidity("Enter a valid value");
     } else {
+
       input.setCustomValidity("");
     }
   }
