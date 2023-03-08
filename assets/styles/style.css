@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
-
 * {
   box-sizing: border-box;
   font-family: "Space Grotesk", sans-serif;
@@ -16,7 +15,6 @@ body {
   padding: 3.2rem 4.3% 4.5rem;
   z-index: 0;
 }
-
 body::before {
   content: "";
   position: absolute;
@@ -29,13 +27,11 @@ body::before {
   background-size: cover;
   z-index: -1;
 }
-
 body .container .container__card {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-
 body .container .container__card .card__back {
   position: relative;
   background-image: url(../images/bg-card-back.png);
@@ -46,14 +42,12 @@ body .container .container__card .card__back {
   padding: 7.3rem 3.8rem 7.1rem 22.7rem;
   margin-left: 15.2%;
 }
-
 body .container .container__card .card__back .card__cvc {
   font-size: 1rem;
   letter-spacing: 0.06em;
   color: hsl(0, 0%, 100%);
   text-transform: none;
 }
-
 body .container .container__card .card__front {
   position: absolute;
   top: 12.6rem;
@@ -68,7 +62,6 @@ body .container .container__card .card__front {
   padding: 8.5rem 2.2rem 2rem 1.9rem;
   margin-right: 15.2%;
 }
-
 body .container .container__card .card__front .card__number {
   grid-area: number;
   font-size: 1.8rem;
@@ -76,7 +69,6 @@ body .container .container__card .card__front .card__number {
   color: hsl(0, 0%, 100%);
   text-transform: none;
 }
-
 body .container .container__card .card__front .card__name {
   grid-area: name;
   font-size: 1rem;
@@ -84,7 +76,6 @@ body .container .container__card .card__front .card__name {
   color: hsl(0, 0%, 100%);
   text-transform: uppercase;
 }
-
 body .container .container__card .card__front .card__date {
   grid-area: date;
   justify-self: end;
@@ -93,7 +84,6 @@ body .container .container__card .card__front .card__date {
   color: hsl(0, 0%, 100%);
   text-transform: none;
 }
-
 body .container .container__card .card__front::before {
   content: "";
   position: absolute;
@@ -113,23 +103,18 @@ body .container .container__form {
   row-gap: 2rem;
   margin: 14.2rem 0.8rem 0;
 }
-
 body .container .container__form .form__container {
   width: 100%;
 }
-
 body .container .container__form .form__container:nth-child(3) {
   width: 50%;
 }
-
 body .container .container__form .form__container:nth-child(3) .form__input {
   width: 40%;
 }
-
 body .container .container__form .form__container:nth-child(4) {
   width: 50%;
 }
-
 body .container .container__form .form__container .form__label {
   display: block;
   font-size: 1.2rem;
@@ -139,7 +124,6 @@ body .container .container__form .form__container .form__label {
   cursor: pointer;
   margin-bottom: 0.8rem;
 }
-
 body .container .container__form .form__container .form__input {
   font-size: 1.8rem;
   letter-spacing: normal;
@@ -152,15 +136,12 @@ body .container .container__form .form__container .form__input {
   margin: 0 0 0.8rem 0;
   cursor: pointer;
 }
-
 body .container .container__form .form__container .form__input::-moz-placeholder {
   color: hsl(279, 6%, 55%);
 }
-
 body .container .container__form .form__container .form__input::placeholder {
   color: hsl(279, 6%, 55%);
 }
-
 body .container .container__form .form__container .form__input:focus {
   outline: none;
   border: 1px solid transparent;
@@ -168,11 +149,9 @@ body .container .container__form .form__container .form__input:focus {
   background-origin: border-box;
   background-clip: padding-box, border-box;
 }
-
 body .container .container__form .form__container .form__input.--border-error {
   border: 1px solid hsl(0, 100%, 66%);
 }
-
 body .container .container__form .form__container .form__alert {
   display: block;
   font-size: 1.2rem;
@@ -180,7 +159,6 @@ body .container .container__form .form__container .form__alert {
   color: hsl(0, 100%, 66%);
   text-transform: none;
 }
-
 body .container .container__form .form__submit {
   font-size: 1.8rem;
   letter-spacing: normal;
@@ -197,7 +175,6 @@ body .container .container__form .form__submit {
 body .container .--hidden {
   display: none;
 }
-
 body .container .complete-state {
   background-image: url(../images/icon-complete.svg);
   background-repeat: no-repeat;
@@ -207,7 +184,6 @@ body .container .complete-state {
   justify-content: center;
   padding: 25.5rem 0.8rem 8.2rem;
 }
-
 body .container .complete-state .complete-state__title {
   font-size: 2.8rem;
   letter-spacing: 0.13em;
@@ -215,7 +191,6 @@ body .container .complete-state .complete-state__title {
   text-transform: uppercase;
   margin: 0 auto;
 }
-
 body .container .complete-state .complete-state__text {
   font-size: 1.8rem;
   letter-spacing: normal;
@@ -223,7 +198,6 @@ body .container .complete-state .complete-state__text {
   text-transform: unset;
   margin: 1.8rem auto 4.8rem;
 }
-
 body .container .complete-state .complete-state__button {
   font-size: 1.8rem;
   letter-spacing: normal;
@@ -235,7 +209,6 @@ body .container .complete-state .complete-state__button {
   width: 100%;
   padding: 1.3rem 0;
 }
-
 body .container .--hidden {
   display: none;
 }
@@ -249,24 +222,21 @@ body .container .--hidden {
     height: 100vh;
     padding: 18.9rem 22.7rem 18.4rem 16.4rem;
   }
-
   body::before {
     background-image: url(../images/bg-main-desktop.png);
     padding: unset;
     width: 48rem;
     height: 100vh;
   }
-
   body .container {
     position: relative;
     display: flex;
     -moz-column-gap: 13rem;
-    column-gap: 13rem;
+         column-gap: 13rem;
     width: 100%;
     height: 100%;
     max-height: 55rem;
   }
-
   body .container .container__card {
     display: flex;
     flex-direction: column-reverse;
@@ -274,19 +244,16 @@ body .container .--hidden {
     width: -moz-fit-content;
     width: fit-content;
   }
-
   body .container .container__card .card__back {
     width: 44.7rem;
     height: 24.5rem;
     padding: 11.1rem 5.9rem 11.6rem 35.7rem;
     margin: 0 0 0 9.4rem;
   }
-
   body .container .container__card .card__back .card__cvc {
     font-size: 1.6rem;
     letter-spacing: 0.13em;
   }
-
   body .container .container__card .card__front {
     top: 0;
     left: 0;
@@ -297,20 +264,16 @@ body .container .--hidden {
     padding: 13.9rem 3.2rem 2.5rem;
     margin: unset;
   }
-
   body .container .container__card .card__front .card__number {
     font-size: 2.8rem;
   }
-
   body .container .container__card .card__front .card__name {
     font-size: 1.4rem;
     letter-spacing: 0.14em;
   }
-
   body .container .container__card .card__front .card__date {
     font-size: 1.6rem;
   }
-
   body .container .container__card .card__front::before {
     top: 2.7rem;
     left: 3rem;
@@ -318,25 +281,23 @@ body .container .--hidden {
     height: 5rem;
     background-size: 8.8rem;
   }
-
   body .container .container__form {
     align-content: center;
     row-gap: 2.6rem;
     width: 36.4%;
     margin: unset;
   }
-
   body .container .container__form #month {
     margin-right: 0.5rem;
   }
-
   body .container .container__form #year {
     margin-left: 0.5rem;
   }
-
   body .container .container__form .form__submit {
     margin-top: 1.4rem;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+  body .container .complete-state .complete-state__title {
+    width: 100%;
+    text-align: center;
+  }
+}/*# sourceMappingURL=style.css.map */
